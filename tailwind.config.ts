@@ -16,13 +16,14 @@ const config: Config = {
         "blue-gradient": "linear-gradient(180deg, #F2FAFF 0%, #B2DDF5 100%)",
         // card
         "brown-card-gradient":
-          "linear-gradient(180deg, #E4A87033 0%, #B456001A 100%)",
+          "linear-gradient(180deg, rgba(228, 168, 112, 0.2) 0%, rgba(180, 86, 0, 0.2) 100%)",
         "red-card-gradient":
-          "linear-gradient(180deg, #F2929233 0%, #C101011A 100%)",
+          "linear-gradient(180deg, rgba(242, 146, 146, 0.1) 0%, rgba(193, 1, 1, 0.1) 100%)",
         "blue-card-gradient":
-          "linear-gradient(180deg, #84B6FF33 0%, #0046AA1A 100%)",
+          "linear-gradient(180deg, rgba(132, 182, 255, 0.1) 0%, rgba(0, 70, 170, 0.1) 100%)",
+
         "light-blue-card-gradient":
-          "linear-gradient(180deg, #3CBEE733 0%, #639EE333 100%)",
+          "linear-gradient(180deg, rgba(60, 190, 231, 0.05) 0%, rgba(99, 158, 227, 0.05) 100%)",
       },
       colors: {
         // buttons
@@ -34,6 +35,7 @@ const config: Config = {
         "text-light-black": "#313945",
         "text-dark-blue": "#0153C9",
         "text-light-blue": "#1FB9FC",
+        "text-light-gray": "#7B7B7E",
         "text-green": "#16AA09",
         "text-red": "#E46666",
         "text-gold": "#DB9F15",
@@ -62,13 +64,17 @@ const config: Config = {
         "bg-orange": "#FC6B21",
         "bg-lavender-light": "#E2E6F7",
         "border-gray": "#C6CEF0",
+        "border-light-black": "#313945",
+        // cards and icons
+        "light-purple": "#ECEAFE",
+        "light-green": "#E5FFDF",
+        "light-peach": "#FFE9DB",
+        "light-gold": "#FFEDB2",
+        "bright-blue": "#3896FF",
 
         // icons container background
         "icon-light-blue": "#E5F7FF",
         "icon-light-pink": "#FFDDE9",
-        "icon-light-green": "#E5FFDF",
-        "icon-light-peach": "#FFE9DB",
-        "icon-light-purple": "#ECEAFE",
         "icon-pale-blue": "#E4F7FF",
         "icon-light-gray": "#E6E6E6",
         "icon-light-yellow-green": "#F0FFB8",
