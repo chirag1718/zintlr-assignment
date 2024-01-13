@@ -34,11 +34,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lato.className} flex h-full w-full overflow-`}>
-        <div className="sticky top-0 h-full">
+        <div className="sticky top-0 left-0 bottom-0 h-full">
           <Sidebar />
         </div>
 
-        <div className="flex flex-col gap-5 h-full w-full px-14 my-5 overflow-y-auto">
+        <div className="flex flex-col gap-5 h-full w-full px-24 my-5 overflow-y-auto">
           <Navbar />
 
           {children}
