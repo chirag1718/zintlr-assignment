@@ -1,8 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Lato, Nunito, Poppins } from "next/font/google";
 import "./globals.css";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+export const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+export const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
+});
+export const lato = Lato({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+  variable: "--font-lato",
+});
+export const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"],
+  variable: "--font-nunito",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +33,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} h-screen w-full p-5`}>{children}</body>
+      <body className={`${lato.className} flex h-full w-full overflow-`}>
+        <div className="sticky top-0 h-full">
+          <Sidebar />
+        </div>
+
+        <div className="flex flex-col gap-5 h-full w-full px-14 my-5 overflow-y-auto">
+          <Navbar />
+
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
