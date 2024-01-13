@@ -262,7 +262,7 @@ const Sidebar = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-start justify-normal gap-14 h-screen w-[267px] px-2 py-12 bg-bg-primary-light-blue">
+    <div className="flex flex-col items-start justify-normal gap-14 h-screen w-full px-2 py-12 bg-bg-primary-light-blue">
       {/* company logo */}
       <div className="flex items-center justify-center px-6">
         <Image src={"/assets/sidebar/logo.svg"} alt="" width={25} height={25} />
