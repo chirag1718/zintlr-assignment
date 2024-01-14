@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Sidebar = () => {
@@ -24,6 +25,7 @@ const Sidebar = () => {
         </svg>
       ),
       text: "Dashboard",
+      link: "/",
     },
     {
       icon: (
@@ -45,11 +47,12 @@ const Sidebar = () => {
           <path
             d="M18.4229 1.54541H22.7467C23.3233 1.54541 23.7907 2.01282 23.7907 2.58941V13.9329M7.79032 1.54541H2.74382C2.16724 1.54541 1.69983 2.01282 1.69983 2.5894V13.9329M1.69983 13.9329V21.1472C1.69983 21.7237 2.16724 22.1912 2.74383 22.1912H22.7467C23.3233 22.1912 23.7907 21.7237 23.7907 21.1472V13.9329M1.69983 13.9329H23.7907"
             stroke="#313945"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       ),
       text: "Bullion Operations",
+      link: "#",
     },
     {
       icon: (
@@ -72,6 +75,7 @@ const Sidebar = () => {
         </svg>
       ),
       text: "Transactions",
+      link: "#",
     },
     {
       icon: (
@@ -99,6 +103,7 @@ const Sidebar = () => {
         </svg>
       ),
       text: "Your Network",
+      link: "#",
     },
     {
       icon: (
@@ -146,6 +151,7 @@ const Sidebar = () => {
         </svg>
       ),
       text: "Consumers",
+      link: "/manageCustomers",
     },
     {
       icon: (
@@ -159,7 +165,7 @@ const Sidebar = () => {
           <path
             d="M4.83033 1.38477H18.7424M3.20264 4.89525H20.2901"
             stroke="#313945"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             d="M1.40869 18.0908H22.1287V23.6708C22.1287 24.824 21.1938 25.7588 20.0407 25.7588H3.49668C2.34352 25.7588 1.40869 24.824 1.40869 23.6708V18.0908Z"
@@ -173,11 +179,12 @@ const Sidebar = () => {
             height="17.1455"
             rx="1.08799"
             stroke="#313945"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       ),
       text: "Other Operations",
+      link: "#",
     },
     {
       icon: (
@@ -200,6 +207,7 @@ const Sidebar = () => {
         </svg>
       ),
       text: "Mange Bank Acconts",
+      link: "#",
     },
     {
       icon: (
@@ -213,12 +221,12 @@ const Sidebar = () => {
           <path
             d="M1.69983 5.48594V1.30664H23.7907V5.48594H1.69983Z"
             stroke="#313945"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             d="M3.07532 18.9789V5.60498H22.4198V18.9789H3.07532Z"
             stroke="#313945"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <rect
             x="7.12329"
@@ -232,6 +240,7 @@ const Sidebar = () => {
         </svg>
       ),
       text: "FAQ",
+      link: "#",
     },
     {
       icon: (
@@ -254,27 +263,29 @@ const Sidebar = () => {
           <path
             d="M23.4769 16.3613C23.2511 16.0125 22.9303 15.6637 22.5144 15.4428C22.1817 15.28 21.9678 15.0126 21.7777 14.6987C21.1717 13.6988 21.5282 12.3849 22.5382 11.792C23.7264 11.1292 24.1066 9.65265 23.4174 8.5016L22.6214 7.12965C21.9441 5.9786 20.4588 5.57167 19.2825 6.24602C18.2369 6.8041 16.8942 6.43204 16.2882 5.44377C16.0981 5.11822 15.9912 4.76942 16.0149 4.42062C16.0506 3.96718 15.908 3.53699 15.6941 3.18818C15.2545 2.46733 14.4584 1.979 13.5791 1.979H11.9038C11.0364 2.00226 10.2403 2.46733 9.80064 3.18818C9.57488 3.53699 9.44418 3.96718 9.46795 4.42062C9.49171 4.76942 9.38477 5.11822 9.19466 5.44377C8.58868 6.43204 7.24601 6.8041 6.21227 6.24602C5.02407 5.57167 3.5507 5.9786 2.86154 7.12965L2.06544 8.5016C1.38817 9.65265 1.76839 11.1292 2.94471 11.792C3.95468 12.3849 4.31115 13.6988 3.71704 14.6987C3.51505 15.0126 3.30117 15.28 2.96848 15.4428C2.56449 15.6637 2.20803 16.0125 2.01791 16.3613C1.57828 17.0821 1.60204 17.989 2.04168 18.7448L2.86154 20.14C3.30117 20.8841 4.12103 21.3491 4.97654 21.3491C5.38053 21.3491 5.85581 21.2329 6.23603 21.0003C6.53308 20.8027 6.88955 20.7329 7.28165 20.7329C8.45797 20.7329 9.44418 21.698 9.46795 22.849C9.46795 24.1861 10.5611 25.2325 11.9394 25.2325H13.5554C14.9218 25.2325 16.0149 24.1861 16.0149 22.849C16.0506 21.698 17.0368 20.7329 18.2131 20.7329C18.5933 20.7329 18.9498 20.8027 19.2587 21.0003C19.639 21.2329 20.1024 21.3491 20.5182 21.3491C21.3619 21.3491 22.1817 20.8841 22.6214 20.14L23.4531 18.7448C23.8808 17.9658 23.9165 17.0821 23.4769 16.3613"
             stroke="black"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       ),
       text: "Customize Dashboard",
+      link: "#",
     },
   ];
   return (
     <div className="flex flex-col items-start justify-normal gap-14 h-screen w-full px-2 py-12 bg-bg-primary-light-blue">
       {/* company logo */}
-      <div className="flex items-center justify-center px-6">
+      <Link href={"/"} className="flex items-center justify-center px-6">
         <Image src={"/assets/sidebar/logo.svg"} alt="" width={25} height={25} />
         <p className="font-inter font-[600] text-xl drop-shadow-lg text-text-purple">
           ZINTLR
         </p>
-      </div>
+      </Link>
       {/* sidebar items */}
       <div className="flex flex-col items-start justify-normal">
         {SidebarItems.map((items, index) => {
           return (
-            <div
+            <Link
+              href={items.link}
               className="flex items-center justify-normal gap-3 h-[50px] w-[253px] px-3 group isActive hover:bg-bg-primary-blue rounded-full cursor-pointer "
               key={index}
             >
@@ -284,7 +295,7 @@ const Sidebar = () => {
               <p className="font-medium group-[.isActive] group-hover:font-[600] text-gray-500 group-hover:text-white">
                 {items.text}
               </p>
-            </div>
+            </Link>
           );
         })}
       </div>
