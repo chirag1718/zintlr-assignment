@@ -5,8 +5,6 @@ import ConsumerOverviewGrid from "./components/ConsumerOverviewGrid";
 const page = () => {
   return (
     <div className="flex flex-col items-start h-full w-full gap-[10px]">
-      {/* welcome text | kyc pending | high risk | tickets  */}
-      <UserNavbar />
       {/* consumer overview grid */}
       <ConsumerOverviewGrid />
     </div>
