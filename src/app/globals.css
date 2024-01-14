@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 *::-webkit-scrollbar{
-    @apply w-[10px]
+    @apply  w-2
 }
 *::-webkit-scrollbar-thumb{
     @apply bg-text-purple rounded-md bg-opacity-30
