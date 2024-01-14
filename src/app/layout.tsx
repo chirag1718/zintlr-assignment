@@ -3,6 +3,7 @@ import { Inter, Lato, Nunito, Poppins } from "next/font/google";
 import "./globals.css";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
+import UserNavbar from "./components/UserNavbar";
 
 export const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const poppins = Poppins({
@@ -37,10 +38,11 @@ export default function RootLayout({
         <div className="sticky top-0 left-0 bottom-0 h-full">
           <Sidebar />
         </div>
-
         <div className="flex flex-col gap-5 h-full w-full px-24 my-5 overflow-y-auto">
+          {/* navbar */}
           <Navbar />
-
+          {/* user navbar */}
+          <UserNavbar />
           {children}
         </div>
       </body>
