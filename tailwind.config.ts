@@ -24,6 +24,8 @@ const config: Config = {
 
         "light-blue-card-gradient":
           "linear-gradient(180deg, rgba(60, 190, 231, 0.05) 0%, rgba(99, 158, 227, 0.05) 100%)",
+        "bar-graph-linear":
+          "linear-gradient(180deg, #3CBEE7 0%, #639EE3 100%)          ",
       },
       colors: {
         // buttons
