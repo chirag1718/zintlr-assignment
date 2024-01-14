@@ -53,6 +53,7 @@ const config: Config = {
         // *assets
         "text-asset-gold": "#866D1B",
         "text-asset-silver": "#5B5B5B",
+        "text-asset-blue": "#4CAEFF",
 
         // misc
         "bg-red-light": "#FFE0E0",
