@@ -38,11 +38,11 @@ const Navbar = () => {
         <input
           type="text"
           placeholder="Search (Eg: Rewards)"
-          className="h-full w-5/6 pl-6 rounded-l-full outline-none text-lg bg-inherit autofill:bg-inherit"
+          className="h-full w-5/6 pl-6 rounded-l-full outline-none text-lg bg-inherit autofill:bg-inherit placeholder:opacity-80"
         />
         <div className="flex items-center justify-center h-10 w-10 rounded-full overflow-hidden cursor-pointer  bg-white">
           <Image
-            src="/assets/navbar/search.svg"
+            src="/assets/general-svg/search.svg"
             width={20}
             height={20}
             alt="search icon"
@@ -144,7 +144,7 @@ const Navbar = () => {
               <path
                 d="M11.5 1L6.5 7L1 1"
                 stroke="#313945"
-                stroke-linejoin="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>

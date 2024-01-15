@@ -32,6 +32,7 @@ const config: Config = {
         "bg-primary-blue": "#4DAEFF",
         "bg-secondary-light-black": "#313945",
         "bg-btn-disabled": "#808080",
+        "bg-disabled-gray": "#919EAB",
 
         // text
         "text-light-black": "#313945",
@@ -53,6 +54,7 @@ const config: Config = {
         // *assets
         "text-asset-gold": "#866D1B",
         "text-asset-silver": "#5B5B5B",
+        "text-asset-blue": "#4CAEFF",
 
         // misc
         "bg-red-light": "#FFE0E0",
@@ -68,7 +70,7 @@ const config: Config = {
         "border-gray": "#C6CEF0",
         "border-light-black": "#313945",
         // cards and icons
-        "light-purple": "#ECEAFE",
+        "light-purple": "#F0F0F0",
         "light-green": "#E5FFDF",
         "light-peach": "#FFE9DB",
         "light-gold": "#FFEDB2",
@@ -88,12 +90,16 @@ const config: Config = {
         "bg-info": "#3C39B2",
         "bg-progress": "#FFD9C3",
         "bg-blue-gray": "#E5EDF0",
+        "bg-mint": "#D9FFE3",
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
         poppins: ["var(--font-poppins)"],
         lato: ["var(--font-lato)"],
         nunito: ["var(--font-nunito)"],
+      },
+      boxShadow: {
+        filter: "0px 4px 4px 0px #00000040s",
       },
     },
   },

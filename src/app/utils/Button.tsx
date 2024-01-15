@@ -22,16 +22,6 @@ interface ButtonProps {
   className?: string;
 
   /**
-   * The height of the button. Use this prop to adjust the height according to your needs.
-   */
-  height?: number;
-
-  /**
-   * The width of the button. Use this prop to adjust the width according to your needs.
-   */
-  width?: number;
-
-  /**
    * Click event handler for the button.
    */
   onClick?: MouseEventHandler;
@@ -54,14 +44,12 @@ const Button: React.FC<ButtonProps> = ({
   light,
   className,
   onClick,
-  height,
-  width,
   iconPosition = "before",
 }) => {
   // General button class
   const buttonClasses = `flex items-center justify-center ${
     icon && `gap-2`
-  } px-[10px] py-[5px] rounded border ${
+  }  px-[10px] py-[5px] rounded border ${
     light
       ? "bg-white border-border-light-black text-text-light-black"
       : "bg-bg-secondary-light-black border-border-light-black text-white"
@@ -83,7 +71,6 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      style={{ height: height, width: width }}
       className={`${buttonClasses} ${hoverStyles} ${activeStyles}`}
     >
       <span>{icon}</span>
