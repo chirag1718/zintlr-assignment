@@ -422,11 +422,11 @@ const PrimaryDrawer = () => {
           {/* //! Lending */}
           <div className="flex items-center justify-between w-full min-h-[72px] px-6 py-3 bg-white">
             <div className="flex items-center justify-start gap-[10px]">
-              <div className="flex items-center justify-center h-12 w-12 rounded-full cursor-pointer bg-light-green">
+              <div className="flex items-center justify-center h-12 w-12 rounded-full cursor-pointer bg-icon-light-pink">
                 <Image
-                  src="/assets/consumerOverview/cash.svg"
-                  width={21}
-                  height={21}
+                  src="/assets/general-svg/lending.svg"
+                  width={29}
+                  height={29}
                   alt="cash wallet icon"
                 />
               </div>
