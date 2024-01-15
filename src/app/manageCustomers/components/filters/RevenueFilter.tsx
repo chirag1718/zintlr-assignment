@@ -1,13 +1,7 @@
-import { useData } from "@/app/hooks/useData";
 import Image from "next/image";
 import React from "react";
 
 const RevenueFilter = () => {
-  const { setData } = useData();
-  const handelASC = (data: any) => {
-    const sortedData = data.sort(({ a, b }: any) => a - b);
-    setData(sortedData);
-  };
   return (
     <div
       onClick={(e) => e.stopPropagation()}
