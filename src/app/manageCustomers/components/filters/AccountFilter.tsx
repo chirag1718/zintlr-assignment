@@ -1,3 +1,4 @@
+import { useData } from "@/store/useData";
 import React from "react";
 
 const AccountFilter = () => {
@@ -8,6 +9,9 @@ const AccountFilter = () => {
     "Salary",
     "Earner",
   ];
+  const { updateSelectedAccountType } = useData((state) => ({
+    updateSelectedAccountType: state.updateSelectedAccountType,
+  }));
   return (
     <div
       onClick={(e) => e.stopPropagation()}
@@ -19,7 +23,14 @@ const AccountFilter = () => {
             key={index}
             className="flex items-center justify-center gap-2 *:cursor-pointer"
           >
-            <input type="checkbox" name="" id="" className="h-4 w-4" />
+            <input
+              type="checkbox"
+              name=""
+              id=""
+              className="h-4 w-4"
+              value={zone}
+              onChange={(e) => updateSelectedAccountType(e.target.value)}
+            />
             <p className="text-sm font-normal">{zone}</p>
           </div>
         );

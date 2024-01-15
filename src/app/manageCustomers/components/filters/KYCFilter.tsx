@@ -1,3 +1,4 @@
+import { useData } from "@/store/useData";
 import Image from "next/image";
 import React from "react";
 
@@ -24,6 +25,9 @@ const KYCFilter = () => {
       color: "text-text-filter-gray",
     },
   ];
+  const { updateSelectedStatus } = useData((state) => ({
+    updateSelectedStatus: state.updateSelectedStatus,
+  }));
   return (
     <div
       onClick={(e) => e.stopPropagation()}
@@ -35,7 +39,14 @@ const KYCFilter = () => {
             key={index}
             className="flex items-center justify-center gap-3 *:cursor-pointer"
           >
-            <input type="checkbox" name="" id=""  className="h-4 w-4"/>
+            <input
+              type="checkbox"
+              name=""
+              id=""
+              className="h-4 w-4"
+              value={item.text}
+              onChange={(e) => updateSelectedStatus(e.target.value)}
+            />
             <div
               className={`flex items-center justify-center h-6 w-[88px] rounded-full text-xs font-normal ${item.bgColor} ${item.color}`}
             >

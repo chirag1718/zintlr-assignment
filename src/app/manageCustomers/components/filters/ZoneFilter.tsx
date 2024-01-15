@@ -1,7 +1,11 @@
+import { useData } from "@/store/useData";
 import React from "react";
 
 const ZoneFilter = () => {
   const zones = ["East", "West", "North", "South"];
+  const { updateSelectedZone } = useData((state) => ({
+    updateSelectedZone: state.updateSelectedZone,
+  }));
   return (
     <div
       onClick={(e) => e.stopPropagation()}
@@ -13,7 +17,14 @@ const ZoneFilter = () => {
             key={index}
             className="flex items-center justify-center gap-2 *:cursor-pointer"
           >
-            <input type="checkbox" name="" id="" className="h-4 w-4" />
+            <input
+              type="checkbox"
+              name=""
+              id=""
+              className="h-4 w-4"
+              value={zone}
+              onChange={(e) => updateSelectedZone(e.target.value)}
+            />
             <p className="text-sm font-normal">{zone}</p>
           </div>
         );
