@@ -206,7 +206,7 @@ const Sidebar = () => {
           />
         </svg>
       ),
-      text: "Mange Bank Acconts",
+      text: "Manage Bank Accounts",
       link: "#",
     },
     {
