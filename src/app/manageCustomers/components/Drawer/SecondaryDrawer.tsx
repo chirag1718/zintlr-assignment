@@ -31,7 +31,7 @@ const SecondaryDrawer = () => {
               />
               <div className="flex items-center justify-center h-12 w-12 rounded-full cursor-pointer bg-light-purple">
                 <Image
-                  src="/assets/consumerOverview/moneyBag.svg"
+                  src="/assets/consumerOverview/moneybag.svg"
                   width={18}
                   height={18}
                   alt="cash wallet icon"
