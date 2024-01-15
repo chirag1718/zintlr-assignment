@@ -1,7 +1,75 @@
+"use client";
 import Image from "next/image";
-import React from "react";
-import { data } from "../data/data";
+import React, { useEffect, useState } from "react";
+import { usePagination } from "@/app/hooks/usePagination";
+import { Status } from "./Status";
+import RevenueFilter from "./filters/RevenueFilter";
+import KYCFilter from "./filters/KYCFilter";
+import ZoneFilter from "./filters/ZoneFilter";
+import AccountFilter from "./filters/AccountFilter";
+import { useData } from "@/app/hooks/useData";
+import { useSearch } from "@/app/hooks/useSearch";
 const ConsumerTable = () => {
+  // use pagination hook
+  const {
+    currentData,
+    currentPage,
+    totalPages,
+    handleNextPage,
+    handlePreviousPage,
+    setCurrentPage,
+  } = usePagination();
+
+  // state for drop down
+  const [isActive, setIsActive] = useState({
+    revenue: false,
+    kyc: false,
+    zone: false,
+    accountType: false,
+  });
+
+  const toggleRevenue = () => {
+    setIsActive((prev) => ({
+      ...prev,
+      revenue: !prev.revenue,
+      accountType: false,
+      zone: false,
+      kyc: false,
+    }));
+  };
+  const toggleKyC = () => {
+    setIsActive((prev) => ({
+      ...prev,
+      kyc: !prev.kyc,
+      accountType: false,
+      revenue: false,
+      zone: false,
+    }));
+  };
+  const toggleZone = () => {
+    setIsActive((prev) => ({
+      ...prev,
+      zone: !prev.zone,
+      accountType: false,
+      revenue: false,
+      kyc: false,
+    }));
+  };
+  const toggleAccountType = () => {
+    setIsActive((prev) => ({
+      ...prev,
+      accountType: !prev.accountType,
+      zone: false,
+      revenue: false,
+      kyc: false,
+    }));
+  };
+
+  // console.log(currentData, "current data");
+  // console.log(isActive, "is active");
+  const { data, setData } = useData();
+  const { searchQuery } = useSearch();
+
   return (
     <div className="h-full w-full ">
       <div className="h-full w-full ">
@@ -43,7 +111,7 @@ const ConsumerTable = () => {
                 </div>
               </th>
               {/* Revenue */}
-              <th>
+              <th className="cursor-pointer relative" onClick={toggleRevenue}>
                 <div className="flex items-center gap-2">
                   <div className="flex flex-col gap- items-start justify-center">
                     <p>Revenue</p>
@@ -59,24 +127,26 @@ const ConsumerTable = () => {
                     alt="cheveron down"
                   />
                 </div>
+                {/* revenue filter modal */}
+                {isActive.revenue && <RevenueFilter />}
               </th>
               {/* KYC Status */}
-              <th>
+              <th className="cursor-pointer relative" onClick={toggleKyC}>
                 <div className="flex items-center gap-2">
                   <p>KYC Status</p>
                   <Image
-                    className="cursor-pointer"
                     src="/assets/general-svg/dropdown.svg"
                     height={10}
                     width={10}
                     alt="cheveron down"
                   />
                 </div>
+                {isActive.kyc && <KYCFilter />}
               </th>
               {/* Facilitator */}
               <th>Facilitator</th>
               {/* Zone */}
-              <th>
+              <th className="cursor-pointer relative" onClick={toggleZone}>
                 <div className="flex items-center gap-2">
                   <p>Zone</p>
                   <Image
@@ -87,9 +157,13 @@ const ConsumerTable = () => {
                     alt="cheveron down"
                   />
                 </div>
+                {isActive.zone && <ZoneFilter />}
               </th>
               {/* Account Type */}
-              <th>
+              <th
+                className="cursor-pointer relative"
+                onClick={toggleAccountType}
+              >
                 <div className="flex items-center gap-2">
                   <p>Account Type</p>
                   <Image
@@ -100,13 +174,14 @@ const ConsumerTable = () => {
                     alt="cheveron down"
                   />
                 </div>
+                {isActive.accountType && <AccountFilter />}
               </th>
               {/* TPA */}
               <th>TPA</th>
             </tr>
           </thead>
-          <tbody style={{ maxHeight: "400px", overflowY: "auto" }}>
-            {data.map((item) => {
+          <tbody>
+            {currentData.map((item) => {
               return (
                 <tr
                   key={item.id}
@@ -156,11 +231,7 @@ const ConsumerTable = () => {
                   {/* KYC */}
                   <td>
                     {/* //TODO make a resuable component for status */}
-                    <div className="flex items-center justify-center h-6 w-[88px] rounded-full bg-bg-green-light">
-                      <p className="text-sm font-medium text-text-filter-green">
-                        {item.kycStatus}
-                      </p>
-                    </div>
+                    <Status status={item.kycStatus} />
                   </td>
                   {/* Facilitator */}
                   <td>
@@ -190,7 +261,17 @@ const ConsumerTable = () => {
                   {/* Zone */}
                   <td>{item.zone}</td>
                   {/* Account type */}
-                  <td>{item.accountType}</td>
+                  <td>
+                    <div className="">
+                      <span>{item.accountType.type}</span>
+                      <span className="text-text-dark-blue">
+                        {item.accountType.subtType?.major}
+                      </span>
+                      <span className="text-text-dark-blue">
+                        {item.accountType.subtType?.minor}
+                      </span>
+                    </div>
+                  </td>
                   {/* TPA */}
                   <td className="truncate">{item.tpa}</td>
                 </tr>
@@ -199,8 +280,53 @@ const ConsumerTable = () => {
           </tbody>
         </table>
       </div>
+      {/* pagination */}
+      <div className="flex items-center justify-center h-10 min-w-full ">
+        <div className="flex items-center justify-center gap-2">
+          {/* navigates to previous page */}
+          <button
+            disabled={currentPage <= 1}
+            className="flex items-center justify-center h-8 w-8 rounded bg-white border  disabled:bg-bg-disabled-gray"
+            onClick={handlePreviousPage}
+          >
+            <Image
+              src="/assets/general-svg/paginationArrow.svg"
+              height={12}
+              width={12}
+              alt="previous page"
+              className="rotate-180"
+            />
+          </button>
 
-      <div className="h-24 min-w-full border-2 border-black"></div>
+          {/* page number */}
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index + 1}
+              className={`flex items-center justify-center h-8 w-8 rounded border transition-all duration-100 ease-in ${
+                currentPage === index + 1 &&
+                "text-bright-blue border-bright-blue scale-110"
+              }  `}
+              onClick={() => setCurrentPage(index + 1)}
+            >
+              {index + 1}
+            </button>
+          ))}
+
+          {/* navigates to next page */}
+          <button
+            disabled={currentPage >= totalPages}
+            className="flex items-center justify-center h-8 w-8 rounded border bg-white disabled:bg-bg-disabled-gray"
+            onClick={handleNextPage}
+          >
+            <Image
+              src="/assets/general-svg/paginationArrow.svg"
+              height={12}
+              width={12}
+              alt="previous page"
+            />
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
