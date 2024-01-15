@@ -32,6 +32,7 @@ const config: Config = {
         "bg-primary-blue": "#4DAEFF",
         "bg-secondary-light-black": "#313945",
         "bg-btn-disabled": "#808080",
+        "bg-disabled-gray": "#919EAB",
 
         // text
         "text-light-black": "#313945",
@@ -95,6 +96,9 @@ const config: Config = {
         poppins: ["var(--font-poppins)"],
         lato: ["var(--font-lato)"],
         nunito: ["var(--font-nunito)"],
+      },
+      boxShadow: {
+        filter: "0px 4px 4px 0px #00000040s",
       },
     },
   },
