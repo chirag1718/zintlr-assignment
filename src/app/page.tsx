@@ -1,5 +1,4 @@
 import React from "react";
-import UserNavbar from "./components/UserNavbar";
 import ConsumerOverviewGrid from "./components/ConsumerOverviewGrid";
 
 const page = () => {
