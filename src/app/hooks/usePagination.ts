@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { useData } from "./useData";
+import { useState } from "react";
+import { useData } from "@/store/useData";
 /**
  * usePagination hook is used for implementing pagination logic
  * @returns Custom pagination hook
