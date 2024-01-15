@@ -7,8 +7,8 @@ import RevenueFilter from "./filters/RevenueFilter";
 import KYCFilter from "./filters/KYCFilter";
 import ZoneFilter from "./filters/ZoneFilter";
 import AccountFilter from "./filters/AccountFilter";
-import { useData } from "@/app/hooks/useData";
-import { useSearch } from "@/app/hooks/useSearch";
+import Drawer from "./Drawer/Drawer";
+import { useDrawerStore } from "@/store/drawer";
 const ConsumerTable = () => {
   // use pagination hook
   const {
@@ -65,13 +65,16 @@ const ConsumerTable = () => {
     }));
   };
 
-  // console.log(currentData, "current data");
-  // console.log(isActive, "is active");
-  const { data, setData } = useData();
-  const { searchQuery } = useSearch();
+  // drawer state
+  const { showDrawer, toggleDrawer } = useDrawerStore((state) => ({
+    showDrawer: state.showDrawer,
+    toggleDrawer: state.toggleDrawer,
+  }));
 
   return (
     <div className="h-full w-full ">
+      <Drawer />
+
       <div className="h-full w-full ">
         <table className="w-full table-auto">
           <thead>
@@ -190,7 +193,10 @@ const ConsumerTable = () => {
                   {/* consumer name */}
                   <td>
                     <div className="flex items-center gap-2">
-                      <p className="text-base font-normal text-text-dark-blue">
+                      <p
+                        className="text-base font-normal cursor-pointer text-text-dark-blue"
+                        onClick={toggleDrawer}
+                      >
                         {item.consumerName}
                       </p>
                       {item.notification && (
