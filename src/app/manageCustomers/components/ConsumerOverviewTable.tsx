@@ -1,9 +1,11 @@
-import Button from "@/app/utils/Button";
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { ChangeEvent } from "react";
 import ConsumerTable from "./ConsumerTable";
+import { useSearch } from "@/app/hooks/useSearch";
 
 const ConsumerOverviewTable = () => {
+  const { searchQuery, setSearchQuery, handleSearch } = useSearch();
   return (
     <div className="flex flex-col items-start justify-normal gap-2 h-full mt-5 ">
       <p className="text-lg font-semibold">Consumer Overview</p>
@@ -14,6 +16,16 @@ const ConsumerOverviewTable = () => {
             type="text"
             placeholder="Search Consumers"
             className="h-full w-full py-2 pl-[11px] pr-11 text-base font-medium outline-none placeholder:opacity-80"
+            value={searchQuery}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              setSearchQuery(e.target.value)
+            }
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleSearch(e);
+                console.log("workigng");
+              }
+            }}
           />
           <Image
             src="/assets/general-svg/search.svg"
@@ -21,6 +33,7 @@ const ConsumerOverviewTable = () => {
             height={16}
             alt="search icon"
             className="absolute top-3 right-3 cursor-pointer"
+            onClick={handleSearch}
           />
         </div>
         {/* filter */}
