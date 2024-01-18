@@ -279,7 +279,7 @@ const ConsumerTable = () => {
                     </div>
                   </td>
                   {/* TPA */}
-                  <td className="truncate">{item.tpa}</td>
+                  <td className="truncate pr-1">{item.tpa}</td>
                 </tr>
               );
             })}
