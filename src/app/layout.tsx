@@ -40,7 +40,7 @@ export default function RootLayout({
         <div className="sticky top-0 left-0 bottom-0 h-full">
           <Sidebar />
         </div>
-        <div className="flex flex-col gap-5 h-full w-full px-24 my-5 overflow-auto">
+        <div className="flex flex-col gap-5 h-full w-full px-3 xl:px-24 my-5 overflow-auto">
           {/* navbar */}
           <Navbar />
           {/* user navbar */}

@@ -274,32 +274,32 @@ const Sidebar = () => {
   return (
     <div className="flex flex-col items-start justify-normal gap-14 h-screen w-full px-2 py-12 bg-bg-primary-light-blue">
       {/* company logo */}
-      <Link href={"/"} className="flex items-center justify-center px-6">
-        <Image src={"/assets/sidebar/logo.svg"} alt="" width={25} height={25} />
-        <p className="font-inter font-[600] text-xl drop-shadow-lg text-text-purple">
+      <Link href={"/"} className="flex items-center justify-center w-full xl:flex xl:flex-row xl:items-center xl:justify-normal xl:px-6">
+          <Image src={"/assets/sidebar/logo.svg"} alt="" width={0} height={0} className="h-10 w-10 xl:h-[25px] xl:w-[25px]" />
+        <p className="hidden xl:block font-inter font-[600] text-xl drop-shadow-lg text-text-purple">
           ZINTLR
         </p>
       </Link>
       {/* sidebar items */}
-      <div className="flex flex-col items-start justify-normal">
+      <div className="flex flex-col items-center justify-center xl:items-start xl:justify-normal w-full">
         {SidebarItems.map((items, index) => {
           return (
             <Link
               href={items.link}
-              className="flex items-center justify-normal gap-3 h-[50px] w-[253px] px-3 group isActive hover:bg-bg-primary-blue rounded-full cursor-pointer "
+              className="flex items-center justify-normal gap-3 h-[50px] xl:w-[253px] px-3 group isActive hover:bg-bg-primary-blue rounded-full cursor-pointer "
               key={index}
             >
               <div className="flex items-center justify-center h-[33px] w-[33px] rounded-full object-contain group-[.isActive] group-hover:text-white group-hover:bg-white">
                 {items.icon}
               </div>
-              <p className="font-medium group-[.isActive] group-hover:font-[600] text-gray-500 group-hover:text-white">
+              <p className="hidden xl:flex font-medium group-[.isActive] group-hover:font-[600] text-gray-500 group-hover:text-white">
                 {items.text}
               </p>
             </Link>
           );
         })}
       </div>
-      <div className="flex flex-col gap-1 justify-normal items-center w-full">
+      <div className="hidden xl:flex flex-col gap-1 justify-normal items-center w-full">
         <p className="flex items-start justify-normal pl-3 w-full text-base font-medium">
           Your Stock
         </p>

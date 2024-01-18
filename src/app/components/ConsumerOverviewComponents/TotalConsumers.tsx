@@ -3,22 +3,23 @@ import React from "react";
 
 const TotalConsumers = () => {
   return (
-    <div className="flex items-center justify-start gap-7 h-full w-full min-w-[904px] border rounded-xl overflow-hidden">
+    <div className="flex items-center justify-start gap-7 h-full w-full 2xl:min-w-[904px] border rounded-xl overflow-hidden">
       {/* total count card */}
-      <div className="flex items-center gap-6 justify-center h-full min-w-[293px] rounded-r-xl bg-bg-lavender-light text-text-light-black">
+      <div className="flex items-center gap-6 justify-center h-[124px] 2xl:h-full w-full 2xl:w-auto 2xl:min-w-[293px] rounded-r-xl bg-bg-lavender-light text-text-light-black">
         <Image
           src="/assets/consumerOverview/users.svg"
           width={79}
           height={64}
           alt=""
+          className="hidden sm:block md:block 2xl:block"
         />
         <div>
           <p className="text-[18px] font-normal">Total Consumers</p>
-          <p className="text-3xl font-semibold">1,342</p>
+          <p className="text-3xl font-semibold text-center sm:text-left md:text-clip lg:text-left xl:text-left">1,342</p>
         </div>
       </div>
       {/* insights */}
-      <div className="flex items-center justify-center gap-10">
+      <div className=" hidden 2xl:flex items-center justify-center gap-6">
         {/* 1st col */}
         <div className="flex flex-col gap-5 justify-center">
           {/* child 1 */}

@@ -43,7 +43,7 @@ const Transactions = () => {
         <p className="text-lg font-semibold text-text-light-black">
           5 Greatest Transactions
         </p>
-        <div className="flex items-center justify-start gap-2">
+        <div className="hidden md:flex items-center justify-start gap-2">
           <Button text="Past Week" light={true} className="text-xs h-6" />
           <Button text="Past Month" light={false} className="text-xs h-6" />
           <Button text="Past Year" light={true} className="text-xs h-6" />

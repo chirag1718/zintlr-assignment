@@ -3,7 +3,7 @@ import React from "react";
 
 const CashWallet = () => {
   return (
-    <div className="flex items-center justify-between px-5 h-full w-full border rounded-md bg-light-purple">
+    <div className="flex items-center justify-between py-1 px-5 h-full w-full border rounded-md bg-light-purple">
       <div className="flex items-center justify-start gap-[10px]">
         <div className="flex items-center justify-center h-12 w-12 rounded-full cursor-pointer bg-white">
           <Image
@@ -14,8 +14,10 @@ const CashWallet = () => {
           />
         </div>
         <div className="flex flex-col items-start justify-start">
-          <p className="text-base text-text-light-black">Overall Cash Wallet</p>
-          <p className="flex items-center justify-center gap-2 text-sm font-semibold cursor-pointer text-text-dark-blue">
+          <p className="hidden md:block text-base text-text-light-black">
+            Overall Cash Wallet
+          </p>
+          <p className="hidden md:flex items-center justify-center gap-2 text-sm font-semibold cursor-pointer text-text-dark-blue">
             Wallet History
             <span>
               <Image

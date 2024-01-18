@@ -4,9 +4,9 @@ import React from "react";
 
 const TotalEarnings = () => {
   return (
-    <div className="h-full flex items-center justify-between gap-5 px-5 border rounded-md">
+    <div className="h-full flex items-center justify-between gap-5 py-1 px-5 border rounded-md">
       {/* text */}
-      <div className="flex flex-col items-start justify-normal gap-3">
+      <div className="flex flex-col items-center md:items-start w-full md:w-auto md:justify-normal gap-3">
         <div>
           <p className="text-sm">Total Earnings</p>
           <p>₹1,321,342</p>
@@ -24,6 +24,7 @@ const TotalEarnings = () => {
             />
           }
           iconPosition="after"
+          className="hidden md:flex"
         />
       </div>
       <Image
@@ -31,7 +32,7 @@ const TotalEarnings = () => {
         width={262}
         height={115}
         alt="drop down"
-        className=""
+        className="hidden md:block"
       />
     </div>
   );

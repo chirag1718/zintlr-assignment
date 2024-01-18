@@ -34,11 +34,11 @@ const Navbar = () => {
       className={`${poppins.className} flex items-center justify-between min-h-[85px] `}
     >
       {/* search */}
-      <div className="flex items-center justify-between h-[50px] w-[374px] rounded-full overflow-hidden pr-[5px] bg-bg-primary-light-blue">
+      <div className="flex items-center justify-between h-[50px] w-52 md:w-[374px] rounded-full overflow-hidden pr-[5px] bg-bg-primary-light-blue">
         <input
           type="text"
           placeholder="Search (Eg: Rewards)"
-          className="h-full w-5/6 pl-6 rounded-l-full outline-none text-lg bg-inherit autofill:bg-inherit placeholder:opacity-80"
+          className="text-xs h-full w-5/6 pl-6 rounded-l-full outline-none md:text-lg bg-inherit autofill:bg-inherit placeholder:opacity-80"
         />
         <div className="flex items-center justify-center h-10 w-10 rounded-full overflow-hidden cursor-pointer  bg-white">
           <Image
@@ -52,7 +52,7 @@ const Navbar = () => {
       {/* nav item */}
       <div className="flex items-center justify-center gap-4">
         {/* navigating icons */}
-        <div className="flex items-center justify-center gap-4">
+        <div className="hidden md:flex items-center justify-center gap-2 md:gap-4">
           {navItems.map((item) => {
             return (
               <Image
@@ -67,7 +67,7 @@ const Navbar = () => {
           })}
         </div>
         {/* gold rate card */}
-        <div className="flex items-center justify-center gap-4 h-[83px] min-w-[300px] rounded-xl border border-border-gray bg-white">
+        <div className="hidden 2xl:flex items-center justify-center gap-4 h-[83px] min-w-[300px] rounded-xl border border-border-gray bg-white">
           {/* gold */}
           <div className="flex flex-col items-start justify-start gap-1 ">
             <p className="font-medium text-base cursor-pointer text-text-orange">
@@ -123,7 +123,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* profile */}
-        <div className="flex items-center justify-center gap-3 h-[85px] min-w-[130px] rounded-lg relative bg-bg-primary-light-blue">
+        <div className="hidden md:flex items-center justify-center gap-3 h-[85px] min-w-[130px] rounded-lg relative bg-bg-primary-light-blue">
           {/* profile picture*/}
           <Image
             src="/assets/navbar/profile.svg"

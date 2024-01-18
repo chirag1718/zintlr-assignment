@@ -100,7 +100,7 @@ const ConsumerAnalysis = () => {
           Consumer Analysis
         </p>
         {/*  */}
-        <div className="flex items-center justify-between px-5 border-b border-border-gray">
+        <div className="hidden md:flex items-center justify-between px-5 border-b border-border-gray">
           <div className="flex items-center justify-normal">
             <ButtonSecondary
               text="Activity"
@@ -115,7 +115,7 @@ const ConsumerAnalysis = () => {
               onClick={() => handleTabClick("volume")}
             />
           </div>
-          <div className="flex items-center gap-2 *:text-xs">
+          <div className="hidden md:flex items-center gap-2 *:text-xs">
             <Button text="Past Week" light={true} />
             <Button text="Past Month" light={false} />
             <Button text="Past Year" light={true} />
@@ -123,7 +123,7 @@ const ConsumerAnalysis = () => {
           </div>
         </div>
         {/*  */}
-        <div className="flex items-center justify-end w-full gap-1 px-5 *:text-sm">
+        <div className="hidden md:flex items-center justify-end w-full gap-1 px-5 *:text-sm">
           <Button
             text="Filter By Associates"
             iconPosition="after"

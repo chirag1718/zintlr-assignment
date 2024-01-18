@@ -50,7 +50,7 @@ const Revenue = () => {
             text="Top 5"
             iconPosition="after"
             light={true}
-            className="text-sm font-medium"
+            className="hidden md:flex text-sm font-medium"
             icon={
               <Image
                 src="/assets/general-svg/cheveronDown.svg"
@@ -61,7 +61,7 @@ const Revenue = () => {
             }
           />
         </div>
-        <div className="flex items-center justify-start gap-2">
+        <div className="hidden md:flex items-center justify-start gap-2">
           <Button text="Past Week" light={true} className="text-xs h-6" />
           <Button text="Past Month" light={false} className="text-xs h-6" />
           <Button text="Past Year" light={true} className="text-xs h-6" />
