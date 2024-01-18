@@ -7,8 +7,8 @@ const TotalEarnings = () => {
     <div className="h-full flex items-center justify-between gap-5 py-1 px-5 border rounded-md">
       {/* text */}
       <div className="flex flex-col items-center md:items-start w-full md:w-auto md:justify-normal gap-3">
-        <div>
-          <p className="text-sm">Total Earnings</p>
+        <div className="flex md:flex-col items-center justify-between w-full gap-1">
+          <p className="md:text-sm">Total Earnings</p>
           <p>₹1,321,342</p>
         </div>
         <Button

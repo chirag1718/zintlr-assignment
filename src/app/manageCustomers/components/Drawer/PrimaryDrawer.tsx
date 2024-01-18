@@ -13,7 +13,7 @@ import {
   PointElement,
   LineElement,
 } from "chart.js";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useDrawerStore } from "@/store/drawer";
 import SecondaryDrawer from "./SecondaryDrawer";
 const PrimaryDrawer = () => {
@@ -123,7 +123,7 @@ const PrimaryDrawer = () => {
       animate="animate"
       exit="exit"
       variants={DrawerVariant}
-      className="absolute h-screen w-auto ma-xw-[1339px] origin-right cursor-default bg-scroll bg-bg-blue-gray shadow-2xl"
+      className="absolute h-screen max-w-[1339px] origin-right cursor-default bg-scroll bg-bg-blue-gray shadow-2xl"
     >
       {/* consumer name and details */}
       <div className="flex items-center justify-between h-[90px] px-6 w-full border-b bg-white">

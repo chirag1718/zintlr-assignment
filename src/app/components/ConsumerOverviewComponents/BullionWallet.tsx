@@ -30,26 +30,28 @@ const BullionWallet = () => {
           </p>
         </div>
       </div>
-      <div className="hidden md:flex flex-col items-center justify-center gap-7">
-        <p className="flex items-center justify-center h-[25px] w-[59px] rounded-full text-sm font-bold cursor-pointer text-text-gold bg-light-gold">
-          Gold
-        </p>
-        <p className="flex items-center justify-center h-[25px] w-[59px] rounded-full text-sm font-bold cursor-pointer text-text-silver bg-white">
-          Silver
-        </p>
-      </div>
-      <div className="flex flex-col gap-3">
-        <div className="text-right cursor-pointer">
-          <p className="hidden md:block text-sm font-bold">4,232 gm</p>
-          <p className="flex items-center justify-center h-6 w-[98px] text-base font-bold rounded-full bg-white text-text-dark-blue">
-            ₹9242.5
+      <div className="flex items-center gap-4 h-full">
+        <div className="flex flex-col items-center justify-center gap-1 md:gap-5 md:pt-5">
+          <p className="flex items-center justify-center h-[25px] w-[59px] rounded-full text-sm font-bold cursor-pointer text-text-gold bg-light-gold">
+            Gold
+          </p>
+          <p className="flex items-center justify-center h-[25px] w-[59px] rounded-full text-sm font-bold cursor-pointer text-text-silver bg-white">
+            Silver
           </p>
         </div>
-        <div className="text-right cursor-pointer">
-          <p className="hidden md:block text-sm font-bold">134,232 gm</p>
-          <p className="flex items-center justify-center h-6 w-[98px] text-base font-bold rounded-full bg-white text-text-dark-blue">
-            ₹922.5
-          </p>
+        <div className="flex flex-col gap-1">
+          <div className="text-right cursor-pointer">
+            <p className="hidden md:block text-sm font-bold">4,232 gm</p>
+            <p className="flex items-center justify-center h-6 w-[98px] text-base font-bold rounded-full bg-white text-text-dark-blue">
+              ₹9242.5
+            </p>
+          </div>
+          <div className="text-right cursor-pointer">
+            <p className="hidden md:block text-sm font-bold">134,232 gm</p>
+            <p className="flex items-center justify-center h-6 w-[98px] text-base font-bold rounded-full bg-white text-text-dark-blue">
+              ₹922.5
+            </p>
+          </div>
         </div>
       </div>
     </div>

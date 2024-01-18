@@ -76,9 +76,9 @@ const ConsumerTable = () => {
       <Drawer />
 
       <div className="h-full w-full overflow-auto">
-        <table className="w-full table-auto">
+        <table className="w-full table-auto whitespace-nowrap">
           <thead>
-            <tr className="h-[50px] w-auto text-left *:pl-3 text-nowrap bg-bg-table-header">
+            <tr className="h-[50px] w-auto text-left *:px-5 text-nowrap bg-bg-table-header">
               {/* Consumer Name */}
               <th>Consumer Name</th>
               {/* Assets */}
@@ -188,7 +188,7 @@ const ConsumerTable = () => {
               return (
                 <tr
                   key={item.id}
-                  className="h-20 *:pl-3 even:bg-bg-primary-light-blue odd:bg-white"
+                  className="h-20 *:px-5 even:bg-bg-primary-light-blue odd:bg-white"
                 >
                   {/* consumer name */}
                   <td>
