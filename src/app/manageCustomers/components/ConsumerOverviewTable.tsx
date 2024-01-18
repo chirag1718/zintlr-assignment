@@ -39,7 +39,7 @@ const ConsumerOverviewTable = () => {
         {/* filter */}
         <div className="flex items-center justify-center gap-1">
           {/* rounded arrows */}
-          <button className="flex items-center justify-center h-10 w-10 rounded border border-border-light-black bg-bg-secondary-light-black">
+          <button className="hidden sm:flex items-center justify-center h-10 w-10 rounded border border-border-light-black bg-bg-secondary-light-black">
             <Image
               src="/assets/consumerOverview/roundedArrows.svg"
               width={16}
@@ -48,7 +48,7 @@ const ConsumerOverviewTable = () => {
             />
           </button>
           {/* excel */}
-          <button className="flex items-center justify-center h-10 w-10 rounded border border-border-light-black bg-white">
+          <button className="hidden sm:flex items-center justify-center h-10 w-10 rounded border border-border-light-black bg-white">
             <Image
               src="/assets/consumerOverview/excel.svg"
               width={16}
@@ -57,7 +57,7 @@ const ConsumerOverviewTable = () => {
             />
           </button>
           {/* csv */}
-          <button className="flex items-center justify-center h-10 w-10 rounded border border-border-light-black bg-white">
+          <button className="hidden sm:flex items-center justify-center h-10 w-10 rounded border border-border-light-black bg-white">
             <Image
               src="/assets/consumerOverview/csv.svg"
               width={16}
