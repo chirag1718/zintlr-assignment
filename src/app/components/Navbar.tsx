@@ -34,7 +34,7 @@ const Navbar = () => {
       className={`${poppins.className} flex items-center justify-between min-h-[85px] `}
     >
       {/* search */}
-      <div className="flex items-center justify-between h-[50px] w-52 md:w-[374px] rounded-full overflow-hidden pr-[5px] bg-bg-primary-light-blue">
+      <div className="flex items-center justify-between h-[50px] w-full md:w-[374px] rounded-full overflow-hidden pr-[5px] bg-bg-primary-light-blue">
         <input
           type="text"
           placeholder="Search (Eg: Rewards)"
