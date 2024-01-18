@@ -75,7 +75,7 @@ const ConsumerTable = () => {
     <div className="h-full w-full ">
       <Drawer />
 
-      <div className="h-full w-full ">
+      <div className="h-full w-full overflow-auto">
         <table className="w-full table-auto">
           <thead>
             <tr className="h-[50px] w-auto text-left *:pl-3 text-nowrap bg-bg-table-header">
@@ -287,7 +287,7 @@ const ConsumerTable = () => {
         </table>
       </div>
       {/* pagination */}
-      <div className="flex items-center justify-center h-10 min-w-full ">
+      <div className="scale-75 md:scale-100 flex items-center justify-center h-10 min-w-full ">
         <div className="flex items-center justify-center gap-2">
           {/* navigates to previous page */}
           <button

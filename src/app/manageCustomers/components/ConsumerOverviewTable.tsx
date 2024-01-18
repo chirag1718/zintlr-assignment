@@ -15,9 +15,9 @@ const ConsumerOverviewTable = () => {
   return (
     <div className="flex flex-col items-start justify-normal gap-2 h-full mt-5 ">
       <p className="text-lg font-semibold">Consumer Overview</p>
-      <div className="flex items-center justify-between w-full">
+      <div className="flex items-center justify-between w-full gap-2">
         {/* search */}
-        <div className="h-10 w-full border max-w-[396px] rounded font-nunito overflow-hidden relative border-border-gray">
+        <div className="h-10 w-full border md:max-w-[396px] rounded font-nunito overflow-hidden relative border-border-gray">
           <input
             type="text"
             placeholder="Search Consumers"
