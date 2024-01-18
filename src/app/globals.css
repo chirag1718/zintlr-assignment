@@ -17,6 +17,3 @@
   display: none;
 }
 
-*{
-  @apply !transition-all !duration-100 !ease-in
-}
