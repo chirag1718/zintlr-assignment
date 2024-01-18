@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 *::-webkit-scrollbar {
-  @apply w-2;
+  @apply w-2 h-1;
 }
 *::-webkit-scrollbar-thumb {
   @apply bg-text-purple rounded-md bg-opacity-30;
@@ -15,4 +15,8 @@
 
 .noScroll::-webkit-scrollbar {
   display: none;
+}
+
+*{
+  @apply !transition-all !duration-100 !ease-in
 }
